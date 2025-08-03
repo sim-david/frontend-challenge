@@ -9,34 +9,34 @@ Ce projet est une implémentation d'une interface de configuration de campagne m
 
 ## 🎯 Fonctionnalités Implémentées
 
--   ** En-tête et Navigation :**
+-   En-tête et Navigation :
     -   Ouverture de modales pour les actions principales (Code PIN, QR Code).
     -   Liaison du bouton "Sauvegarder" à la soumission globale du formulaire.
     -   Header entièrement responsive.
 
--   ** Système d'Alertes :**
+-   Système d'Alertes :
     -   Affichage d'alertes contextuelles (ex: PIN non configuré, infos).
     -   Composant d'alerte personnalisé fidèle à la maquette.
 
--   ** Organisation des Actions :**
+-   Organisation des Actions :
     -   Liste dynamique des actions à réaliser par les clients.
     -   Réorganisation des actions par glisser-déposer (Drag and Drop).
     -   Gestion de différents types d'actions et détection des doublons.
 
--   ** Sélection du Type de Jeu :**
+-   Sélection du Type de Jeu :
     -   Interface de sélection visuelle entre 4 types de jeux.
     -   Logique de désactivation de la sélection pour les profils "BASIC".
 
--   ** Personnalisation du Jeu :**
+-   Personnalisation du Jeu :
     -   Zone d'upload de logo avec support du glisser-déposer.
     -   Champs de sélection de couleurs avec validation de format (hexadécimal).
     -   Logique de désactivation pour les profils "BASIC".
 
--   ** Configuration des Récompenses :**
+-   Configuration des Récompenses :
     -   Gestion dynamique des gains (ajout, modification, suppression).
     -   Logique pour le mode "100% Gagnant" : ajout/suppression automatique du gain "Perte" et validation d'au moins un gain illimité.
 
--   ** Conditions de Récupération :**
+-   Conditions de Récupération :
     -   Options globales pour conditionner la récupération des cadeaux.
     -   Affichage d'un champ conditionnel pour le montant d'achat minimum.
     -   Tableau des conditions synchronisé avec la liste des gains configurés.
