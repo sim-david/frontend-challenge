@@ -2,41 +2,41 @@
 
 Ce projet est une implémentation d'une interface de configuration de campagne marketing, réalisée dans le cadre d'un challenge technique pour un poste de développeur front-end. L'objectif était de construire une page riche et dynamique permettant à un utilisateur de paramétrer une campagne de A à Z, en utilisant des technologies modernes et en respectant des contraintes précises.
 
-![Aperçu de la page de configuration](<img width="1919" height="814" alt="Capture d'écran 2025-08-03 175947" src="https://github.com/user-attachments/assets/668dee9b-d0de-4ef4-988c-7f9412cda99b" /><img width="1918" height="907" alt="Capture d'écran 2025-08-03 180001" src="https://github.com/user-attachments/assets/55009f3b-5fc2-43d5-af9a-165f3b7bb023" /><img width="1919" height="874" alt="Capture d'écran 2025-08-03 180013" src="https://github.com/user-attachments/assets/584f53ef-6195-487a-810a-95f6a0545643" />)
+<img width="1919" height="814" alt="Capture d'écran 2025-08-03 175947" src="https://github.com/user-attachments/assets/668dee9b-d0de-4ef4-988c-7f9412cda99b" /><img width="1918" height="907" alt="Capture d'écran 2025-08-03 180001" src="https://github.com/user-attachments/assets/55009f3b-5fc2-43d5-af9a-165f3b7bb023" /><img width="1919" height="874" alt="Capture d'écran 2025-08-03 180013" src="https://github.com/user-attachments/assets/584f53ef-6195-487a-810a-95f6a0545643" />
 
 
 ---
 
 ## 🎯 Fonctionnalités Implémentées
 
--   **[x] En-tête et Navigation :**
+-   ** En-tête et Navigation :**
     -   Ouverture de modales pour les actions principales (Code PIN, QR Code).
     -   Liaison du bouton "Sauvegarder" à la soumission globale du formulaire.
     -   Header entièrement responsive.
 
--   **[x] Système d'Alertes :**
+-   ** Système d'Alertes :**
     -   Affichage d'alertes contextuelles (ex: PIN non configuré, infos).
     -   Composant d'alerte personnalisé fidèle à la maquette.
 
--   **[x] Organisation des Actions :**
+-   ** Organisation des Actions :**
     -   Liste dynamique des actions à réaliser par les clients.
     -   Réorganisation des actions par glisser-déposer (Drag and Drop).
     -   Gestion de différents types d'actions et détection des doublons.
 
--   **[x] Sélection du Type de Jeu :**
+-   ** Sélection du Type de Jeu :**
     -   Interface de sélection visuelle entre 4 types de jeux.
     -   Logique de désactivation de la sélection pour les profils "BASIC".
 
--   **[x] Personnalisation du Jeu :**
+-   ** Personnalisation du Jeu :**
     -   Zone d'upload de logo avec support du glisser-déposer.
     -   Champs de sélection de couleurs avec validation de format (hexadécimal).
     -   Logique de désactivation pour les profils "BASIC".
 
--   **[x] Configuration des Récompenses :**
+-   ** Configuration des Récompenses :**
     -   Gestion dynamique des gains (ajout, modification, suppression).
     -   Logique pour le mode "100% Gagnant" : ajout/suppression automatique du gain "Perte" et validation d'au moins un gain illimité.
 
--   **[x] Conditions de Récupération :**
+-   ** Conditions de Récupération :**
     -   Options globales pour conditionner la récupération des cadeaux.
     -   Affichage d'un champ conditionnel pour le montant d'achat minimum.
     -   Tableau des conditions synchronisé avec la liste des gains configurés.
@@ -47,7 +47,7 @@ Ce projet est une implémentation d'une interface de configuration de campagne m
 
 ### Stack Technologique
 
--   **Framework :** React 18
+-   **Framework :** React 19.1
 -   **Langage :** TypeScript
 -   **Build Tool :** Vite
 -   **UI :** Material-UI (MUI) v5
@@ -77,7 +77,7 @@ Pour lancer le projet en local, suivez ces étapes :
 
 1.  **Clonez le dépôt :**
     ```bash
-    git clone [https://your-repo-link.git](https://github.com/sim-david/frontend-challenge.git)
+    git clone https://github.com/sim-david/frontend-challenge.git
     cd nom-du-dossier
     ```
 
@@ -99,4 +99,4 @@ L'application sera alors accessible à l'adresse `http://localhost:5173`.
 
 ---
 
-**Auteur : [https://github.com/Dendeey]**
+**Auteur : https://github.com/Dendeey**
