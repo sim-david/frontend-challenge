@@ -1,90 +1,102 @@
-# Challenge Technique Frontend
+# Challenge Front-End : Configuration de la page Campagne
 
-## Aperçu
-Ce dépôt contient un challenge technique pour les candidats développeurs frontend. Le challenge consiste à implémenter la page de configuration "Ma Campagne" en utilisant React, Material UI et react-hook-form.
+Ce projet est une implémentation d'une interface de configuration de campagne marketing, réalisée dans le cadre d'un challenge technique pour un poste de développeur front-end. L'objectif était de construire une page riche et dynamique permettant à un utilisateur de paramétrer une campagne de A à Z, en utilisant des technologies modernes et en respectant des contraintes précises.
 
-## Description du Challenge
-Vous devez développer la page de configuration "Ma Campagne" comme présentée dans la maquette fournie. Cette page permet aux utilisateurs de configurer des campagnes marketing avec des éléments interactifs incluant des actions, des jeux, des récompenses et des conditions de récupération. Notez que seule la page de configuration de campagne est à implémenter, pas la navigation latérale ni les autres pages.
+![Aperçu de la page de configuration](<img width="1919" height="814" alt="Capture d'écran 2025-08-03 175947" src="https://github.com/user-attachments/assets/668dee9b-d0de-4ef4-988c-7f9412cda99b" /><img width="1918" height="907" alt="Capture d'écran 2025-08-03 180001" src="https://github.com/user-attachments/assets/55009f3b-5fc2-43d5-af9a-165f3b7bb023" /><img width="1919" height="874" alt="Capture d'écran 2025-08-03 180013" src="https://github.com/user-attachments/assets/584f53ef-6195-487a-810a-95f6a0545643" />)
 
-Notez que ce challenge est volontairement ambitieux dans sa portée. L'évaluation portera davantage sur la qualité de votre implémentation et la maîtrise des technologies (React, MaterialUI, react-hook-form) que sur la quantité de fonctionnalités complétées. Privilégiez une implémentation soignée et bien structurée des composants principaux plutôt qu'une réalisation complète mais superficielle de l'ensemble de la page.
 
-## Exigences
+---
 
-### Exigences Techniques
-- Implémenter l'interface utilisateur selon la maquette fournie
-- Utiliser React pour construire l'interface
-- Implémenter la logique du formulaire avec react-hook-form
-- Gérer les champs conditionnels et les sections pliables
-- Implémenter les validations et les alertes
-- S'assurer que les données du formulaire correspondent à la structure de réponse API fournie
-- Aucun backend n'est attendu, vous pouvez simuler les interactions avec un backend (localStorage, mock API, etc.) pour rendre l'application interactive
+## 🎯 Fonctionnalités Implémentées
 
-### Fonctionnalités Clés à Implémenter
+-   **[x] En-tête et Navigation :**
+    -   Ouverture de modales pour les actions principales (Code PIN, QR Code).
+    -   Liaison du bouton "Sauvegarder" à la soumission globale du formulaire.
+    -   Header entièrement responsive.
 
-1. **En-tête et Navigation**
-   - Les boutons "Mon Code PIN", "QR Code" et autres boutons similaires doivent ouvrir des modales (le contenu des modales peut être ignoré)
-   - Le bouton "SAUVEGARDER" doit sauvegarder les modifications de la campagne
+-   **[x] Système d'Alertes :**
+    -   Affichage d'alertes contextuelles (ex: PIN non configuré, infos).
+    -   Composant d'alerte personnalisé fidèle à la maquette.
 
-2. **Système d'Alertes**
-   - La section d'alerte doit contenir toutes les alertes relatives à la campagne
-   - Alertes à implémenter :
-     - Alerte : code PIN non configuré
-     - Info : message sur l'importance des couleurs personnalisées pour l'image de l'établissement et l'engagement des joueurs
+-   **[x] Organisation des Actions :**
+    -   Liste dynamique des actions à réaliser par les clients.
+    -   Réorganisation des actions par glisser-déposer (Drag and Drop).
+    -   Gestion de différents types d'actions et détection des doublons.
 
-3. **Organisation des Actions de Campagne**
-   - L'ordre des actions doit être modifiable par drag and drop
-   - Prendre en charge différents types d'actions (Avis Google, Parrainage, etc.)
-   - Ne pas implémenter les boutons "Modifier" et "En savoir plus" de l'action Parrainage
-   - Afficher un avertissement pour les actions en double
+-   **[x] Sélection du Type de Jeu :**
+    -   Interface de sélection visuelle entre 4 types de jeux.
+    -   Logique de désactivation de la sélection pour les profils "BASIC".
 
-4. **Sélection du Type de Jeu**
-   - La "Roue de la Fortune" doit être sélectionnée par défaut
-   - Permettre la sélection entre les quatre types de jeux disponibles
-   - Si le profil est "BASIC", la sélection du type de jeu doit être désactivée (roue par défaut)
+-   **[x] Personnalisation du Jeu :**
+    -   Zone d'upload de logo avec support du glisser-déposer.
+    -   Champs de sélection de couleurs avec validation de format (hexadécimal).
+    -   Logique de désactivation pour les profils "BASIC".
 
-5. **Personnalisation du Jeu**
-   - Implémenter la validation des inputs pour les couleurs (format hexadécimal)
-   - Le dépôt d'image doit pouvoir se faire en drag and drop
-   - Implémenter le bouton "Voir l'aperçu" (la fonctionnalité d'aperçu elle-même n'est pas requise)
-   - Si le profil est "BASIC", la personnalisation des couleurs doit être désactivée
+-   **[x] Configuration des Récompenses :**
+    -   Gestion dynamique des gains (ajout, modification, suppression).
+    -   Logique pour le mode "100% Gagnant" : ajout/suppression automatique du gain "Perte" et validation d'au moins un gain illimité.
 
-6. **Configuration des Récompenses**
-   - Si le jeu n'est pas "100% Gagnant", ajouter automatiquement une PERTE au tableau des gains
-   - Si le jeu est "100% Gagnant", au moins un gain doit être en quantité illimitée (initial_limit = -1)
-   - Ne pas implémenter le comportement du bouton "Tirage au sort"
-   - Permettre l'ajout, la modification et la suppression des récompenses
+-   **[x] Conditions de Récupération :**
+    -   Options globales pour conditionner la récupération des cadeaux.
+    -   Affichage d'un champ conditionnel pour le montant d'achat minimum.
+    -   Tableau des conditions synchronisé avec la liste des gains configurés.
 
-7. **Conditions de Récupération**
-   - Le tableau des conditions doit être synchronisé avec le tableau des gains
-   - Implémenter l'interrupteur "Pour tous les gains"
-   - Implémenter l'interrupteur "Sous condition d'achat minimal" avec champ de saisie conditionnel
+---
 
-8. **Navigation Latérale** *(Optionnel)*
-   - La navigation latérale est visible dans la maquette mais son implémentation n'est pas requise
-   - Concentrez-vous uniquement sur la page de configuration de campagne
+## ⚙️ Choix Techniques et Architecture
 
-## Comment Participer
-1. Forker ce dépôt sur votre compte GitHub personnel
-2. Cloner votre fork sur votre machine locale
-3. Installer les dépendances avec `npm install` ou `yarn install`
-4. Démarrer le serveur de développement avec `npm start` ou `yarn start`
-5. Implémenter les fonctionnalités requises
-6. Pousser votre travail sur votre fork GitHub
-7. Nous envoyer par email le lien vers votre dépôt GitHub contenant votre solution
+### Stack Technologique
 
-## Critères d'Évaluation
-- Qualité et organisation du code
-- Maîtrise des technologies utilisées (React, MaterialUI, react-hook-form)
-- Implémentation précise de l'interface utilisateur selon la maquette
-- Implémentation correcte de la logique de formulaire avec react-hook-form
-- Gestion des champs conditionnels et validation
-- Gestion d'état appropriée
-- Implémentation des sections pliables
-- Considérations de design responsive
-- Expérience utilisateur globale
+-   **Framework :** React 18
+-   **Langage :** TypeScript
+-   **Build Tool :** Vite
+-   **UI :** Material-UI (MUI) v5
+-   **Gestion de Formulaires :** `react-hook-form`
+-   **Validation de Schéma :** `zod`
+-   **Drag & Drop :** `@dnd-kit`
+-   **Upload de Fichiers :** `react-dropzone`
+-   **Génération d'ID :** `uuid`
 
-Rappel : Une implémentation partielle mais bien exécutée sera mieux évaluée qu'une implémentation complète mais de qualité moindre.
+### Architecture
 
-## Ressources
-- La structure de l'objet Campagne se trouve dans `doc/CampaignType.ts`
-- La maquette de design est disponible dans le dépôt sous `doc/Configuration Campagne.png`
+Le projet est structuré autour d'une **page principale unique (`CampaignConfigurationPage`)** qui agit comme un "smart component". Elle centralise la logique du formulaire et la gestion de l'état global.
+
+-   **Gestion de l'état :** L'état du formulaire est entièrement géré par **`react-hook-form`** pour des performances optimales (via les composants non contrôlés) et une API robuste. Le hook **`useFormContext`** est utilisé pour fournir le contexte du formulaire aux composants enfants sans avoir à "prop-driller" les méthodes `register`, `control`, etc.
+
+-   **Composants :** L'interface est décomposée en composants fonctionnels et modulaires (ex: `Header`, `ActionsList`, `GameSelector`), chacun responsable d'une section de la maquette. Cette approche facilite la maintenance et la lisibilité du code.
+
+-   **Validation :** La validation des données est assurée par **`zod`** via le `@hookform/resolvers/zod`. Cette librairie permet de définir des schémas de données complexes et d'inférer automatiquement les types TypeScript, garantissant une cohérence parfaite entre la validation et les types de l'application. Des règles complexes (ex: la validation croisée pour le mode "100% Gagnant") sont implémentées avec la méthode `superRefine` de `zod`.
+
+-   **Styling :** Le style est géré par **Material-UI**. L'approche "responsive" a été implémentée en utilisant la **prop `sx`**, qui permet de définir des styles conditionnels en fonction des points de rupture du thème (breakpoints).
+
+---
+
+## 🛠️ Installation et Lancement
+
+Pour lancer le projet en local, suivez ces étapes :
+
+1.  **Clonez le dépôt :**
+    ```bash
+    git clone [https://your-repo-link.git](https://github.com/sim-david/frontend-challenge.git)
+    cd nom-du-dossier
+    ```
+
+2.  **Installez les dépendances :**
+    ```bash
+    npm install
+    ```
+
+3.  **Lancez le serveur de développement :**
+    ```bash
+    npm run dev
+    ```
+
+L'application sera alors accessible à l'adresse `http://localhost:5173`.
+
+### Scripts Disponibles
+
+-   `npm run dev` : Lance l'application en mode développement.
+
+---
+
+**Auteur : [https://github.com/Dendeey]**
